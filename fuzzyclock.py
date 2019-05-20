@@ -8,7 +8,7 @@ minute=int(time.strftime("%M"))
 texthours = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"]
 
 
-textminutes = ["", "five past ", "ten past ", "fifteen past ", "twenty past ", "twentyfive past ", "half past ", "twentyfive to ", "twenty to ", "fifteen to ", "ten to ", "five to"]
+textminutes = ["", "five past ", "ten past ", "fifteen past ", "twenty past ", "twentyfive past ", "half past ", "twentyfive to ", "twenty to ", "fifteen to ", "ten to ", "five to "]
 
 if minute > 30:
     if hour < 12: 
