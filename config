@@ -1,0 +1,34 @@
+[cpu usage]
+command=mpstat 1 1 | grep Average | awk '{print 100.0 - $12"%"}'
+interval=2
+label=💻
+
+[memory]
+command=free -h | grep Mem | awk '{print $3}'
+interval=2
+label=🐏
+
+[core temp]
+command=sensors | grep Package | awk '{print $4}'
+interval=5
+label=🌡
+
+[disk space left]
+command=df -h | grep sda4 | awk '{print $4}'
+interval=60
+label=💾
+
+[uptime]
+command=uptime -p | awk -F "up " '{print $2}'
+interval=60
+label=⏫
+
+[time]
+command=python3 $HOME/.config/i3blocks/scripts/fuzzyclock.py
+interval=60
+label=🕝
+
+[date]
+command=date '+%A %B %e'
+interval=once
+label=📆
