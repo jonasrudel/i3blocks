@@ -23,6 +23,11 @@ command=uptime -p | awk -F "up " '{print $2}'
 interval=60
 label=⏫
 
+[battery]
+command= acpi | awk '{$0=substr($4,1,length($4)-1); print $0}'
+interval=60
+label=🔋
+
 [time]
 command=python3 $HOME/.config/i3blocks/scripts/fuzzyclock.py
 interval=60
