@@ -14,7 +14,7 @@ interval=5
 label=🌡
 
 [disk space left]
-command=df -h | grep sda4 | awk '{print $4}'
+command=df -h | grep home | awk '{print $4}'
 interval=60
 label=💾
 
@@ -23,8 +23,12 @@ command=uptime -p | awk -F "up " '{print $2}'
 interval=60
 label=⏫
 
+[volume]
+command= sh $HOME/.config/i3blocks/scripts/volume.sh
+interval=2
+
 [battery]
-command= acpi | awk '{$0=substr($4,1,length($4)-1); print $0}'
+command= sh $HOME/.config/i3blocks/scripts/battery.sh
 interval=60
 label=🔋
 
