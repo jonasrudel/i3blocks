@@ -32,6 +32,11 @@ command= sh $HOME/.config/i3blocks/scripts/battery.sh
 interval=60
 label=🔋
 
+[packages]
+command=checkupdates | wc -l
+interval=1000
+label=📦
+
 [time]
 command=python3 $HOME/.config/i3blocks/scripts/fuzzyclock.py
 interval=60
