@@ -10,7 +10,7 @@ texthours = ["one", "two", "three", "four", "five", "six", "seven", "eight", "ni
 
 textminutes = ["", "five past ", "ten past ", "fifteen past ", "twenty past ", "twentyfive past ", "half past ", "twentyfive to ", "twenty to ", "fifteen to ", "ten to ", "five to "]
 
-if minute > 30:
+if minute > 32:
     if hour < 12: 
         hour+=1
     else:
