@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+volume="$(amixer sget Master | grep 'Left: Playback' | awk '{print $5}')" 
+
+status="$(amixer sget Master | grep 'Left: Playback' | awk '{print $6}')"
+
+if [ "$status" = "[off]" ]
+then
+    echo "🔇 0%"
+else
+    echo "🔉 $volume"
+fi

@@ -1,0 +1,7 @@
+if [ $(cat /sys/class/net/wlp3s0/operstate) = "up" ]
+then
+   echo "wifi: up" 
+else
+    echo "wifi: down"
+fi
+
