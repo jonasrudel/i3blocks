@@ -1,3 +1,12 @@
+command=$HOME/.config/i3blocks/scripts/$BLOCK_NAME
+
+[music]
+interval=2
+label=🎧
+
+[volume]
+interval=2
+
 [cpu usage]
 command=mpstat 1 1 | grep Average | awk '{print 100.0 - $12"%"}'
 interval=2
@@ -23,12 +32,7 @@ command=uptime -p | awk -F "up " '{print $2}'
 interval=60
 label=⏫
 
-[volume]
-command= sh $HOME/.config/i3blocks/scripts/volume.sh
-interval=2
-
 [battery]
-command= sh $HOME/.config/i3blocks/scripts/battery.sh
 interval=60
 label=🔋
 
@@ -37,8 +41,7 @@ command=checkupdates | wc -l
 interval=1000
 label=📦
 
-[time]
-command=python3 $HOME/.config/i3blocks/scripts/fuzzyclock.py
+[fuzzyclock]
 interval=60
 label=🕝
 
