@@ -1,0 +1,23 @@
+#!/bin/sh
+
+ALBUM=$(playerctl metadata album)
+ARTIST=$(playerctl metadata xesam:albumArtist)
+SONG=$(playerctl metadata title)
+STATUS=$(playerctl status)
+if [ "$?" -ne "0" ]; then
+    exit 1
+fi
+
+if [ "$STATUS" = "Playing" ]
+then
+    SYMBOL="▶"
+elif [ "$STATUS" == "Paused" ]
+then
+    SYMBOL="⏸"
+elif [ "$STATUS" == "No players found" ]
+then
+    echo "NO"
+    exit 0
+fi
+
+echo " $SYMBOL $SONG 🎤 $ARTIST 📀 $ALBUM"
