@@ -32,10 +32,6 @@ command=uptime -p | awk -F "up " '{print $2}'
 interval=60
 label=⏫
 
-[battery]
-interval=60
-label=🔋
-
 [packages]
 command=checkupdates | wc -l
 interval=1000
