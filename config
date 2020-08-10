@@ -23,7 +23,7 @@ interval=5
 label=🌡
 
 [disk space left]
-command=df -h | grep home | awk '{print $4}'
+command=df -h | grep sdb1 | awk '{print $4}'
 interval=60
 label=💾
 
